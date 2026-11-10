@@ -1,0 +1,12 @@
+INVITACIÓN 50 DE CRIS — EMAIL + SUPABASE + RESEND
+
+1. En Supabase SQL Editor ejecutar configurar_supabase.sql (la tabla debe estar vacía).
+2. En Vercel Production deben existir: SUPABASE_URL, SUPABASE_SECRET_KEY, RESEND_API_KEY.
+3. Para enviar a invitados reales, verificar dominio remitente en Resend y agregar variable RESEND_FROM_EMAIL (ejemplo: Los 50 de Cris <invitaciones@tudominio.com>).
+4. Sin dominio verificado, onboarding@resend.dev solo sirve para pruebas enviando al email autorizado de tu cuenta Resend.
+5. Subir index.html, cris-aventurera.jpg y la carpeta api/ a la raíz del repositorio GitHub. NO subir configurar_supabase.sql ni claves privadas.
+6. Vercel desplegará el commit automáticamente. Si las variables se agregaron después del último deploy, el nuevo despliegue las tomará.
+7. Probar con TU correo autorizado de Resend. Verificar registro en Supabase y correo recibido. El mismo email no podrá registrarse de nuevo.
+8. Si falla Resend, la confirmación se guarda igual y el formulario informa que el email no fue enviado. NO volver a registrar; consultar logs de Vercel.
+9. IMPORTANTE: la restricción por correo NO verifica la propiedad del correo ni impide que alguien use correos distintos. Para mayor seguridad agregar OTP/CAPTCHA y rate limit.
+10. Las claves privadas que se compartieron en un chat deben rotarse.
